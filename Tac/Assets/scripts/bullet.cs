@@ -13,6 +13,8 @@ public class bullet : MonoBehaviour
         rb.velocity = transform.right * speedBullet;
     }
     void OnTriggerEnter2D(Collider2D hitInfo) {
+        if (hitInfo.name == "Ennemy")
+            PlayerInfo.enhealth += 5;
         Destroy(gameObject);
     }
 }
