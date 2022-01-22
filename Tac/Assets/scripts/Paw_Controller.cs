@@ -15,9 +15,10 @@ public class Paw_Controller : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space)) {
-            Debug.Log("should show");
             gameObject.GetComponent<Renderer>().enabled = true;
         }
-        gameObject.GetComponent<Renderer>().enabled = false;
+        if (Input.GetKeyUp(KeyCode.Space)) {
+            gameObject.GetComponent<Renderer>().enabled = false;
+        }
     }
 }
