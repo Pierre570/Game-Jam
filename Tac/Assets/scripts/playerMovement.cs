@@ -14,6 +14,10 @@ public class playerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        if (Input.GetKeyDown(KeyCode.E))
+            PlayerInfo.health += 5;
+        if (Input.GetKeyDown(KeyCode.F))
+            PlayerInfo.enhealth += 5;
     }
     void FixedUpdate()
     {
