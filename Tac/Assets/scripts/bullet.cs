@@ -6,12 +6,13 @@ public class bullet : MonoBehaviour
 {
     public float speedBullet = 20f;
     public Rigidbody2D rb;
+    public GameObject impactEffect;
+
     void Start()
     {
         rb.velocity = transform.right * speedBullet;
     }
     void OnTriggerEnter2D(Collider2D hitInfo) {
-        Debug.Log(hitInfo.name);
         Destroy(gameObject);
     }
 }
