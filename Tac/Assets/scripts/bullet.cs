@@ -14,7 +14,7 @@ public class bullet : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D hitInfo) {
         if (hitInfo.name == "Ennemy")
-            PlayerInfo.enhealth += 5;
+            PlayerInfo.enhealth += 3;
         Destroy(gameObject);
     }
 }

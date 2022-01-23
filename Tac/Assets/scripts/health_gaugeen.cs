@@ -18,5 +18,11 @@ public class health_gaugeen : MonoBehaviour
     {
         SliderDis.value = PlayerInfo.enhealth;
         Target.transform.position = new Vector3(base_position.x - SliderDis.value * 2.3f, base_position.y);
+        if (PlayerInfo.enhealth >= PlayerInfo.enemy_max_health) {
+            PlayerInfo.ChangeScene("Menu");
+            PlayerInfo.health = 0;
+            PlayerInfo.enhealth = 0;
+            PlayerInfo.level1Cleared = true;
+        }
     }
 }

@@ -16,6 +16,11 @@ public class health_gauge : MonoBehaviour
     }
     void Update()
     {
+        if (PlayerInfo.health >= PlayerInfo.player_max_health) {
+            PlayerInfo.ChangeScene("Menu");
+            PlayerInfo.health = 0;
+            PlayerInfo.enhealth = 0;
+        }
         SliderDis.value = PlayerInfo.health;
         Target.transform.position = new Vector3(base_position.x + SliderDis.value * 2.3f, base_position.y);
     }

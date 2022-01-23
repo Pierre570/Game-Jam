@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    public float move_speed = 30f;
+    public float move_speed = 100f;
 
     public Rigidbody2D rb;
     
@@ -18,6 +18,8 @@ public class playerMovement : MonoBehaviour
             PlayerInfo.health += 5;
         if (Input.GetKeyDown(KeyCode.F))
             PlayerInfo.enhealth += 5;
+        if (Input.GetKeyDown(KeyCode.Escape))
+            PlayerInfo.ChangeScene("Menu");
     }
     void FixedUpdate()
     {
