@@ -18,8 +18,11 @@ public class playerMovement : MonoBehaviour
             PlayerInfo.health += 5;
         if (Input.GetKeyDown(KeyCode.F))
             PlayerInfo.enhealth += 5;
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)) {
             PlayerInfo.ChangeScene("Menu");
+            PlayerInfo.health = 0;
+            PlayerInfo.enhealth = 0;
+        }
     }
     void FixedUpdate()
     {
